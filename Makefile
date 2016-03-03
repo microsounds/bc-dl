@@ -16,7 +16,7 @@ OUTPUT=bc-dl
 .PHONY: all clean install uninstall remove
 
 all: $(INPUT)
-	$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDES) -o $(OUTPUT) $(INPUT)
+	$(CC) $(CFLAGS) $(INCLUDES) -o $(OUTPUT) $(INPUT) $(LDFLAGS)
 
 clean:
 	rm -rf $(OUTPUT)
