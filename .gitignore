@@ -1,6 +1,7 @@
 ## compiler output
 *.o
 *.out
+bc-dl
 
 ## bc-dl output
 *.jpg

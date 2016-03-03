@@ -1,7 +1,7 @@
 ## bc-dl - basic CLI downloader for bandcamp.com
 ![version] ![license]
 
-```bc-dl``` is a minimal command line music scraping application for downloading 128kbps MP3 streams from any [bandcamp.com](bandcamp.com) album page. ```bc-dl``` is written in pure *C89*, making it extremely lightweight and fast. With few external dependencies (ONE), it should run on any POSIX-compliant system.
+```bc-dl``` is a minimal command line music scraping application for downloading 128kbps MP3 streams from any [bandcamp.com](http://bandcamp.com) album page. ```bc-dl``` is written in pure *C89*, making it extremely lightweight and fast. With few external dependencies (ONE), it should run on any POSIX-compliant system.
 
 > ```bc-dl``` stands for _"Basic CLI Downloader"_. It does **not** stand for _"Bandcamp Downloader"_.
 
@@ -35,6 +35,8 @@ help:
 ## Building
 ```git clone``` into this repository, run ```make``` to build it.
 Run ```sudo make install``` if you wish to install it on your system.
+
+You can also grab the latest stable version as a zip or tarball from the [Releases](https://github.com/microsounds/bc-dl/releases) tab. 
 
 This program uses ```libcurl``` and POSIX Regular Expressions.
 
