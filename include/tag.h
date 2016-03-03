@@ -21,7 +21,7 @@
 
 enum _id3_frame_type {
 	TIT2, TPE1, TALB, TDRC,
-	TRCK, COMM,	TPE2, APIC
+	TRCK, COMM, TPE2, APIC
 };
 
 struct _id3_frame {
