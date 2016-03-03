@@ -7,6 +7,9 @@ bc-dl
 *.jpg
 *.mp3
 
+## project specific
+VERSION
+
 ## os generated files
 .DS_Store
 .DS_Store?
