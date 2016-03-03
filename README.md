@@ -63,5 +63,5 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ```
-[version]: https://img.shields.io/badge/version-v0.5.1-brightgreen.svg?style=flat)
+[version]: https://img.shields.io/badge/version-v0.5.2-brightgreen.svg?style=flat)
 [license]: https://img.shields.io/badge/license-GPLv3-red.svg?style=flat)

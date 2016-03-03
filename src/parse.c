@@ -144,8 +144,14 @@ char *rewrite_unicode_to_ascii(char *str)
 	{
 		char *hit = strstr(str, unicode_literal);
 		char val = 0; /* '\u003C' => '<' */
-		val += hex_to_dec(hit[4]) * power(16, 1);
-		val += hex_to_dec(hit[5]) * power(16, 0);
+		unsigned i;
+		unsigned exp = 3;
+		for (i = 2; i < 6; i++)
+		{
+			/* hopefully, 16^3 hex digits never occur in the wild */
+			val += hex_to_dec(hit[i]) * power(16, exp);
+			exp--;
+		}
 		hit[0] = val;
 		/* shift string 5 bytes left, overlapping bytes 1 thru 5
 		 * hit +  0 1 2 3 4 5 6 7 8 9 A B C D E F

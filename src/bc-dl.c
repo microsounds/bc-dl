@@ -36,7 +36,7 @@
 struct _global GLOBAL = {
 	.title = "bc-dl",
 	.desc = "basic CLI downloader for bandcamp.com",
-	.ver = "0.5.0",
+	.ver = "0.5.2",
 	.author = "microsounds",
 	.year = "2016",
 	.license = "GNU General Public License v3.0"
