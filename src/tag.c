@@ -164,13 +164,13 @@ void id3_track_numbering(char *frame, size_t *offset, int track, int track_count
 	if (track_count < 10)
 		tr_count_len++;
 
-	char *tr_str = (char*) malloc(sizeof(char) * tr_len + 2);
+	char *tr_str = (char *) malloc(sizeof(char) * tr_len + 2);
 	if (track+1 < 10) /* track number */
 		sprintf(tr_str, "0%u", track+1);
 	else
 		sprintf(tr_str, "%u", track+1);
 
-	char *tr_count_str = (char*) malloc(sizeof(char) * tr_count_len + 2);
+	char *tr_count_str = (char *) malloc(sizeof(char) * tr_count_len + 2);
 	if (track_count < 10) /* total tracks */
 		sprintf(tr_count_str, "0%u", track_count);
 	else
