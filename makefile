@@ -5,7 +5,7 @@
  #
    
 CC=gcc
-CFLAGS=-O2 -ansi -Wall -Wextra -Wpedantic
+CFLAGS=-O2 --std=c99 -Wall -Wextra -Wpedantic
 LDFLAGS=-lcurl
 SRCDIR=src
 INCLUDES=-Iinclude
