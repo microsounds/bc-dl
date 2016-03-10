@@ -25,7 +25,11 @@ char *create_filebuffer(const char *filename)
 	long pos = ftell(fp);
 	char *buffer = (char *) malloc(sizeof(char) * pos + 1);
 	fseek(fp, 0, SEEK_SET);
-	fread(buffer, pos, 1, fp);
+	if(fread(buffer, pos, 1, fp) != 1) 
+	{
+		perror("[!] Failed to read file.\n");
+		abort();
+	}
 	fclose(fp);
 	buffer[pos] = '\0'; /* null terminate */
 	return buffer;
