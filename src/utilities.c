@@ -18,7 +18,7 @@ char *create_filebuffer(const char *filename)
 	FILE *fp = fopen(filename, "r");
 	if (!fp)
 	{
-		perror("[!] Could not open file.\n");
+		perror("[!] Could not open file");
 		abort();
 	}
 	fseek(fp, 0, SEEK_END);
@@ -27,7 +27,7 @@ char *create_filebuffer(const char *filename)
 	fseek(fp, 0, SEEK_SET);
 	if(fread(buffer, pos, 1, fp) != 1) 
 	{
-		perror("[!] Failed to read file.\n");
+		perror("[!] Failed to read file");
 		abort();
 	}
 	fclose(fp);
