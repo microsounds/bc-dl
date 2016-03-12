@@ -16,6 +16,7 @@ INPUT=$(wildcard $(SRCDIR)/*.c)
 OUTPUT=bc-dl
 
 .PHONY: all clean install uninstall remove
+ROOTERR=[$@] $(INSTALLDIR): Permission denied, are you root?
 
 all: $(INPUT)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(OUTPUT) $(INPUT) $(LDFLAGS)
@@ -24,11 +25,19 @@ clean:
 	rm -rf $(OUTPUT)
 
 install: all
+ifeq ($(USER), root)
 	mv $(OUTPUT) $(INSTALLDIR)
 	cp $(MANPAGE) $(MANDIR) && gzip -f $(MANDIR)/$(MANPAGE)
+else
+	$(info $(ROOTERR))
+endif
 
-uninstall:	
+uninstall:
+ifeq ($(USER), root)
 	rm -rf $(INSTALLDIR)/$(OUTPUT)
 	rm -rf $(MANDIR)/$(MANPAGE).gz
+else
+	$(info $(ROOTERR))
+endif
 
 remove: uninstall
