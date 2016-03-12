@@ -1,0 +1,37 @@
+.\" Manpage
+.\" This file is part of bc-dl.
+.\" See bc-dl.c for copyright or LICENSE for license information.
+
+.TH bc-dl 1 "03 March 2016" "0.5.2" "User Commands"
+.SH NAME
+bc-dl \- basic cli downloader for bandcamp.com
+.SH SYNOPSIS
+bc-dl \fB[-h | -v | -i list.txt]\fR http://artist.bandcamp.com/album/example
+.SH DESCRIPTION
+\fBbc-dl\fR is a minimal command line music scraping application for downloading 128kbps MP3 streams from any bandcamp.com album page.
+
+bc-dl takes a URL to a Bandcamp album page and downloads all available \fBmp3-128\fR streams into your current directory. Albums will be saved in the format \fBArtist - Album Name (20XX)/01. Track.mp3\fR. Accurate, UTF-8 compliant ID3v2.4 tags will be written to each track, along with full size album artwork.
+
+If interrupted, downloads can continue where you left off.
+You can also provide a list of newline-separated URLs and bc-dl will iterate through them non-interactively.
+
+.SH NOTE
+This program is primarily for ripping low quality streaming copies of paid albums. Support your favorite artists by purchasing the official, high quality release whenever possible.
+.SH OPTIONS
+.B -h, --help
+- Display help screen.
+
+.B -v, --version
+- Display author, version and license information.
+
+.B -i, --iterate
+- Provide newline-deliminated list of URLs.
+.SH PROJECT PAGE
+https://github.com/microsounds/bc-dl
+.SH BUGS
+Report bugs to <https://github.com/microsounds/bc-dl/issues>
+.SH AUTHOR
+Created by microsounds <https://github.com/microsounds>
+.SH COPYRIGHT
+This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License version 3 or (at your option) any later version. There is NO warranty; not even MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+                     
