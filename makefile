@@ -10,6 +10,8 @@ LDFLAGS=-lcurl
 SRCDIR=src
 INCLUDES=-Iinclude
 INSTALLDIR=/usr/local/bin
+MANDIR=/usr/share/man/man1
+MANPAGE=$(OUTPUT).1
 INPUT=$(wildcard $(SRCDIR)/*.c)
 OUTPUT=bc-dl
 
@@ -23,8 +25,10 @@ clean:
 
 install: all
 	mv $(OUTPUT) $(INSTALLDIR)
+	cp $(MANPAGE) $(MANDIR) && gzip -f $(MANDIR)/$(MANPAGE)
 
 uninstall:	
 	rm -rf $(INSTALLDIR)/$(OUTPUT)
+	rm -rf $(MANDIR)/$(MANPAGE).gz
 
 remove: uninstall
