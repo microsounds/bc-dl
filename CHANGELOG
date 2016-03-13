@@ -1,3 +1,6 @@
+0.5.4
+	Fixed issue where very short song titles would be repeated.
+
 0.5.3
 	Installer now includes a man page.
 
