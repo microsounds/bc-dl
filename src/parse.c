@@ -70,9 +70,10 @@ char **iterative_data_scraper(int iters, char *haystack, char *start, char *end)
 		tmp = strstr(tmp, char_array[i]); /* advance ptr */
 		tmp += strlen(char_array[i]); /* skip forward */
 
-		/* if string is too short, scraper might grab the same string twice */
+		/* if string is really short, shorter than 9 bytes, just skip 600 bytes forward
+		   scraper tends to grab the same string 2+ times if you don't do this */
 		if (strlen(start) > strlen(char_array[i]))
-			tmp += strlen(start) * 16;
+			tmp += 600;
 	}
 	free(tmp_start);
 	return char_array;
