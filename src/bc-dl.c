@@ -9,7 +9,7 @@
 
 /*
  *	bc-dl - basic CLI downloader for bandcamp.com
- *	Copyright (C) 2016 microsounds
+ *	Copyright (C) 2016 microsounds <https://github.com/microsounds>
  *
  *	This program is free software: you can redistribute it and/or modify
  *	it under the terms of the GNU General Public License as published by

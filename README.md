@@ -48,7 +48,7 @@ Bandcamp likes to change their JSON layout periodically, feel free to open an is
 ## License/Copyright
 ```
 bc-dl - basic CLI downloader for bandcamp.com
-Copyright (C) 2016 microsounds
+Copyright (C) 2016 microsounds <https://github.com/microsounds>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
