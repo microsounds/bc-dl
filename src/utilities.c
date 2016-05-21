@@ -18,14 +18,18 @@ char *create_filebuffer(const char *filename)
 	FILE *fp = fopen(filename, "r");
 	if (!fp)
 	{
-		perror("[!] Could not open file.\n");
+		perror("[!] Could not open file");
 		abort();
 	}
 	fseek(fp, 0, SEEK_END);
 	long pos = ftell(fp);
 	char *buffer = (char *) malloc(sizeof(char) * pos + 1);
 	fseek(fp, 0, SEEK_SET);
-	fread(buffer, pos, 1, fp);
+	if(fread(buffer, pos, 1, fp) != 1) 
+	{
+		perror("[!] Failed to read file");
+		abort();
+	}
 	fclose(fp);
 	buffer[pos] = '\0'; /* null terminate */
 	return buffer;
